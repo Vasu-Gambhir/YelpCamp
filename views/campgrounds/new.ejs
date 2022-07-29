@@ -1,0 +1,79 @@
+<% layout('layout/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/images.css" class="rel"> 
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-md-6 offset-md-3">
+        <div class="card shadow">
+            <div class="card-body">
+                <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label"><b>Title : </b></label>
+                        <input class="form-control" type="text" name="campground[title]" id="title" placeholder="CAMPGROUND TITLE" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class ="mb-3">
+                        <label for="location" class="form-label"><b>Location : </b></label>
+                        <input class="form-control" type="text" name="campground[location]" id="location" placeholder="CAMPGROUND LOCATION" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="images" class="form-label custom-file-label" name="image">Upload Image(s)..</label>
+                        <div class="form-file custom-file"></div>
+                        <input class="form-control" type="file" id="images" multiple>
+                        <div class="invalid-feedback">
+                            This campground would look much better with a picture.
+                        </div>
+                    </div> -->
+                    <!-- <input type="file" name="image" id="" multiple> -->
+                    <!-- <div class ="mb-3">
+                        <label for="image" class="form-label"><b>Image URL : </b></label>
+                        <input class="form-control" type="text" name="campground[image]" id="image" placeholder="CAMPGROUND IMAGE" required> 
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="price" class="form-label"><b>Price : </b></label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="price-label">$</span>
+                            <input type="text" class="form-control" id="price" placeholder="0.00" name="campground[price]" aria-describedby="price-label" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class ="mb-3">
+                        <label for="description" class="form-label"><b>Description : </b></label>
+                        <textarea name="campground[description]" id="description" placeholder="CAMPGROUND DESCRIPTION" class="form-control" required></textarea>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"><b>Upload Image(s) : </b></label>
+                        <div class="form-file custom-file">
+                              <input class="form-control custom-file-input" type="file" id="image" name="image" multiple onchange="previewMultiple(event)">
+                              <label for="image" class="form-label custom-file-label"></label>
+                          </div>
+                          <div id="formFile"></div>
+                    </div>
+                    <div class="mb-3 d-inline">
+                        <button class="btn btn-success">ADD!</button>
+                    </div>
+                    <div class="mb-3 d-inline">
+                        <a href="/campgrounds" class="btn btn-warning d-inline">Cancel!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
